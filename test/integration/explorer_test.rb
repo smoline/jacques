@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'ap'
 
 class ExplorerTest < ActionDispatch::IntegrationTest
   def setup

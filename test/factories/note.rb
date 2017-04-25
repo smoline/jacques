@@ -4,7 +4,7 @@ FactoryGirl.define do
     body  { Faker::Hipster.paragraphs(6).join("\n\n") }
 
     transient do
-      tag_count   5
+      tag_count 5
     end
 
     factory :note_with_tags do

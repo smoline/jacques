@@ -8,11 +8,11 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
- gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
- gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -27,6 +27,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
   gem 'database_cleaner'
+  gem 'awesome_print'
 end
 
 group :development do
