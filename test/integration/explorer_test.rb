@@ -25,6 +25,7 @@ class ExplorerTest < ActionDispatch::IntegrationTest
 
   def test_tag_lists_are_correct
     note = Note.first
+    ap note
     get "/api/notes/tag/#{note.tags.first.name}"
     json = JSON.parse(response.body)
     assert_equal note.tags.first.name, json['tag']['name']
@@ -32,7 +33,7 @@ class ExplorerTest < ActionDispatch::IntegrationTest
   end
 
   def test_tag_create_is_correct
-    post '/api/notes',
+    post '/api/notes.json',
       params: {
         title:  "My created post",
         body:   "My created body",
@@ -45,7 +46,7 @@ class ExplorerTest < ActionDispatch::IntegrationTest
   end
 
   def test_improper_note
-    post '/api/notes',
+    post '/api/notes.json',
       params: {
         title:  "",
         body:   "My created body",
